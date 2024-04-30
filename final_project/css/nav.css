@@ -1,0 +1,307 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face { font-family: Glamora; src: url('Glamora.otf'); } 
+
+/* @font-face {
+    font-family: ;
+    src: url(sansation_light.woff);
+  } */
+
+/* global */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+
+    background: #AEB8FE;
+    font-family: "Roslindale Display Condensed";
+
+}
+
+/* global end*/
+
+h1.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 10vw;
+    font-weight: 400;
+
+}
+
+
+/*this overlay is what hides the stuff under*/
+.overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    /* overflow-y: hidden; */
+}
+/* --link-color:e2e2dc */
+/*for animation*/
+svg path {
+    fill: #27187E;
+    /* fill: #920707; */
+
+}
+/* button */
+
+
+
+
+/*for positioning toggel btn*/
+#toggle-btn {
+    position: absolute; 
+    top: -30px;
+    right: -10; 
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    z-index: 2;
+    cursor: pointer;
+
+}
+
+
+#hamburger {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    /* z-index: 2px; */
+  
+  
+}
+
+#hamburger span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 24px;
+    height: 1.25px;
+    background: #27187E;
+    transition: transform 0.25s;
+
+}
+
+#hamburger span:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 44px;
+    height: 1.25px;
+    background:#27187E;
+    transition: transform 0.25s;
+
+}
+
+
+#hamburger span:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 44px;
+    height: 1.25px;
+    background: #27187E;
+    transition: transform 0.25s;
+
+}
+
+
+
+ #hamburger span::before {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    content: "";
+    width: 44px;
+    height: 1.25px;
+    background: #27187E;
+    transform: translateY(-4px);
+    transition: transform 0.25s;
+   
+
+} 
+
+/* #hamburger .active span {
+    transform: rotate(45deg);
+   
+
+
+}
+
+#hamburger .active span::before {
+    top: unset;
+
+    width: 24px;
+    transform: rotate(-90deg);
+
+} */
+
+.nav {
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    overflow-y: hidden;
+
+}
+
+div > .overlay {
+    width: 100%;
+    height: 1000px;
+  
+  
+}
+
+
+.space {
+    width: 100%;
+    height: 1000px;
+    background-color: #AEB8FE;
+}
+
+
+
+
+.nav a {
+    position: relative;
+    top: 120px;
+    line-height: 70%;
+    text-decoration: none;
+    color: #e2e2dc;
+    /* color:red; */
+}
+
+.nav a span {
+    font-size: 20px;
+    margin-right: 2em;
+
+}
+
+.nav-item {
+    position: relative;
+
+}
+
+.nav-item:after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: -20px;
+    width: 120%;
+    height: 200%;
+    background: #27187E;
+    margin: 0 auto;
+
+
+}
+
+.nav-wrap-m {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 6%;
+    margin: 10% 0;
+}
+
+
+
+.nav-wrap-m a {
+
+    font-size: 60px;
+    font-weight: 500;
+    font-family: 'Glamora';
+ 
+}
+
+.nav-wrap-m-2 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7%;
+    margin-bottom: 10%;
+}
+
+.nav-wrap-m-2  .nav-item a {
+    font-family: Raleway;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 40px;
+}
+
+.nav-wrap-m-3 {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    align-items: center;
+    gap: 6%;
+    margin-bottom: 20%;
+}
+
+.nav-wrap-m-3  .nav-item a {
+    font-family: 'Glamora';
+    font-size: 60px;
+ 
+}
+
+
+@media screen and (max-width: 768px){
+
+    .nav {
+        flex-direction: column;
+        height: 100vh;
+        
+    
+    }
+
+    #hamburger span {
+       
+        right: -40;
+    }
+    
+   
+
+    #toggle-btn {
+        top: -40px;
+    }
+
+    .nav-wrap-m-3 {
+        margin-bottom: 10%;
+    }
+
+    .nav-wrap-m-2 {
+        margin-bottom: 0%;
+    }
+
+    .nav-wrap-m {
+        margin-bottom: 0%;
+    }
+
+
+ 
+
+}

@@ -1,0 +1,353 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Inside Mandy's Brain - Sport</title>
+
+		<!-- material icon -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+		/>
+
+		<link rel="stylesheet" href="./css/nav.css" />
+		<link rel="stylesheet" href="./css/food.css" />
+		<!-- GSAP -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js"></script>
+		<!-- myjs -->
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				//setup
+				const tl = gsap.timeline({ paused: true });
+
+				let path = document.querySelector("path");
+
+				//this makes animation possible because it hides css properties and sets them where they should be before animations
+				let spanBefore = CSSRulePlugin.getRule("hamburger span:before");
+				//help i broookkee it
+				gsap.set(spanBefore, { background: "#FFF" });
+				gsap.set(".nav", { visibility: "hidden" });
+
+				//toggle menu
+
+				function revealMenu() {
+					revealMenuItems();
+
+					const hamburger = document.getElementById("hamburger");
+					const toggleBtn = document.getElementById("toggle-btn");
+
+					//I removed the e that was passed into function because I already loaded DOM content and am listening to that
+					toggleBtn.onclick = function () {
+						//when hamburger class is clicked, it will display the css for the active class
+						hamburger.classList.toggle("active");
+						//tl reversed and !reversed is used to open and close the animation after the user clicks
+						tl.reversed(!tl.reversed());
+						// this wont work because it will always evalute to false, and set the timeline in reverse
+						//which doesn't evalute its current state
+						// tl.reversed(true);
+						//this also doesn't work because it works once(on the first click). After that it wont consider alternate conditions
+						// tl.reversed(false);
+					};
+				}
+
+				revealMenu();
+
+				function revealMenuItems() {
+					//defining paths to animate the overlay
+					const start = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+					const end = "M0,2005S175,2000,500,2500s500,500,500,1500V0H0Z";
+
+					const power2 = "power2.inOut";
+					const power4 = "power4.inOut";
+
+					// tl.to(
+					// 	"#hamburger span",
+					// 	1.25,
+					// 	{
+					// 		visibility: "hidden"
+					// 	},
+					// 	"<"
+					// );
+
+					tl.to(
+						"#hamburger span:nth-child(1)",
+						1.25,
+						{
+							marginTop: "-5px",
+							x: -20,
+							y: 28,
+							rotate: 45,
+							ease: "power4.inOut",
+						},
+						"<"
+					);
+
+					tl.to(
+						"#hamburger span:nth-child(2)",
+						1.25,
+						{
+							marginTop: "-5px",
+							x: -20,
+							y: 28,
+							rotate: -45,
+							ease: "power4.inOut",
+						},
+						"<"
+					);
+
+					// tl.to("#hamburger span", 1.25, {
+					// 	marginTop: "-5px",
+					// 	x: -40,
+					// 	y: 28,
+					// 	rotate: -45,
+					// 	ease: "power4.inOut",
+					// },
+					// "<"
+					// );
+
+					tl.to(
+						"#hamburger span",
+						2,
+						{
+							background: "#e2e2dc",
+							ease: "power2.inOut",
+						},
+						"<"
+					);
+
+					tl.to(
+						spanBefore,
+						1.2,
+						{
+							visibility: "hidden",
+							// background: "white",
+							ease: "power2.inOut",
+						},
+						"<"
+					);
+
+					tl.to(
+						path,
+						1.5,
+						{
+							//to animate overlays, we use attribute method in gsap
+							attr: {
+								d: start,
+							},
+							ease: "power2.inOut.easeIn",
+						},
+						"<"
+					).to(
+						path,
+						1.5,
+						{
+							attr: {
+								d: end,
+								// y: 2500,
+							},
+							ease: "power2.inOut.easeIn",
+						},
+						// "-=10"
+						"<"
+					);
+
+					//something went wrong around here
+					// .to(path, 0.8, {
+					//     attr: {
+					//         d:end,
+
+					//     },
+					//     ease: "power2.inOut.easeIn",
+					// },
+					// "-0.5"
+					// )
+
+					//how to reveal
+
+					tl.to(
+						".nav",
+						1,
+						{
+							visibility: "visible",
+						},
+						"-=0.5"
+					);
+
+					tl.to(
+						".nav-item > a",
+						1,
+						{
+							top: 0,
+							ease: "power3.out",
+							stagger: {
+								amount: 0.5,
+							},
+						},
+						"-=1"
+					);
+
+					tl.reverse();
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<!-- svg gsap attempt -->
+		<!-- <svg viewBox="0 0 1000 1000"></svg> -->
+		<!-- svg gsap attempt -->
+		<h1 class="hero-title">Favorite <br />Food</h1>
+		<!-- toggle btn -->
+		<div id="toggle-btn">
+			<div id="hamburger">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+
+		<!-- svg overlay -->
+		<div class="overlay">
+			<svg viewBox="0 0 1000 2000">
+				<path d="M0 2S175 1 1000 1s1000 1 2000 10V0H0Z"></path>
+			</svg>
+		</div>
+
+		<!-- menu items -->
+		<div class="nav">
+			<!-- Primary Menu -->
+
+			<div class="nav-wrap-m">
+				<!-- menu items -->
+				<div class="nav-item">
+					<a href="./movie.html"><span>I</span>Movies</a>
+					<!-- <div class="menu-item-revealer"></div> -->
+				</div>
+
+				<div class="nav-item">
+					<a href="./book.html"><span>II</span>Books</a>
+					<!-- <div class="menu-item-revealer"></div> -->
+				</div>
+
+				<div class="nav-item">
+					<a href="./people.html"><span>III</span>People</a>
+					<!-- <div class="menu-item-revealer"></div> -->
+				</div>
+
+				<!-- menu items end -->
+			</div>
+			<!-- second nav -->
+			<div class="nav-wrap-m-2">
+				<!-- menu items -->
+				<div class="nav-item">
+					<a href="./home.html"><span></span>Home</a>
+					<!-- <div class="menu-item-revealer"></div> -->
+				</div>
+
+				<!-- <div class="nav-item">
+					<a href="#"><span>II</span>Movies</a>
+				</div> -->
+
+				<div class="nav-item">
+					<a href="./sport.html"><span></span>Sports</a>
+					<!-- <div class="menu-item-revealer"></div> -->
+				</div>
+				<!-- menu items end -->
+			</div>
+			<!-- second nav end-->
+
+			<!-- third nav -->
+			<div class="nav-wrap-m-3">
+				<!-- menu items -->
+				<div class="nav-item">
+					<a href="./animal.html"><span>I</span>Animals</a>
+					<!-- <div class="menu-item-revealer"></div> -->
+				</div>
+
+				<div class="nav-item">
+					<a href="./food.html"><span>II</span>Food</a>
+					<!-- <div class="menu-item-revealer"></div> -->
+				</div>
+
+				<div class="nav-item">
+					<a href="./cafes.html"><span>III</span>Cafes</a>
+					<!-- <div class="menu-item-revealer"></div> -->
+				</div>
+				<!-- ^menu items end -->
+			</div>
+			<!-- ^third nav end-->
+		</div>
+
+		<!-- help -->
+
+		<!-- END OF NAV BAR -->
+		<div class="space">
+			<span class="material-symbols-outlined arrow"> keyboard_arrow_down </span>
+			<span class="material-symbols-outlined arrow"> keyboard_arrow_down </span>
+			<span class="material-symbols-outlined arrow"> keyboard_arrow_down </span>
+		</div>
+
+
+		<div class="cont-food">
+
+	<!-- top section -->
+			<div class="wrapper-f">
+				<div class="border1">
+					<div class="border2"></div>
+				</div>
+			</div>
+
+			<div class="wrapper-f2">
+				<div class="border5">
+					<div class="pho-border6"></div>
+				</div>
+
+				<div class="wrapper-f3">
+					<div class="border5">
+						<div class="border6"></div>
+					</div>
+				</div>
+			</div>
+
+	<!-- top section end -->
+
+			<div class="cont-1-5">
+
+					<div class="border5">
+						<div class="border6"></div>
+					</div>
+
+			</div>
+
+			<div class="cont-row2">
+				<div class="wrapper-f2">
+					<div class="border5">
+						<div class="border6"></div>
+					</div>
+	
+					<div class="wrapper-f3">
+						<div class="border5">
+							<div class="border6"></div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="wrapper-f-l">
+					<div class="border1">
+						<div class="border2"></div>
+					</div>
+				</div>
+	
+			</div>
+
+			<!--  -->
+			<div class="wrapper-f-r">
+				<div class="border3">
+					<div class="border4"></div>
+				</div>
+			</div>
+			<!--  -->
+		</div>
+		<!-- cont food end^ -->
+	</body>
+</html>

@@ -1,0 +1,206 @@
+/* GLOBAL */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.space {
+    height: 3000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.arrow {
+    font-size: 10rem;
+    color: black;
+}
+.sec1 {
+    width: 100%;
+    height: 1500px;
+    /* background-color: blue; */
+    z-index: 1000;
+
+ 
+}
+
+.sec1_1 {
+    width: 100%;
+    height: 500px;
+    border-bottom: 10px solid;
+    display: flex;
+    align-items:end;
+    justify-content: flex-start;
+
+}
+
+.sec1_2 {
+    width: 100%;
+    height: 500px;
+    border-bottom: 10px solid;
+}
+
+.sec1_3 {
+    width: 100%;
+    height: 500px;
+    border-bottom: 10px solid;
+}
+
+
+/* radio buttons sec1_1*/
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    padding-left: 10%;
+    /* padding-top: 7%; */
+
+}
+
+.book {
+    background-color: purple;
+    width: 80px;
+    border-radius: 5px;
+    /* makes sure it stays in its container */
+    background-size: cover;
+    cursor: pointer;
+    overflow:hidden;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+
+}
+
+.book > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+
+.book > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    /* ? */
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.description h4 {
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+input {
+    display: none
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translate(0) !important;
+}
+
+.book[for="b1"]{
+    background-color: blue;
+}
+
+.book[for="b2"]{
+    background-color: rgb(70, 70, 96);
+}
+
+
+.book[for="b3"]{
+    background-color: rgb(199, 199, 223);
+}
+
+/* 2nd shelf */
+
+.container2 {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+    padding-top: 7%;
+    /* padding-left: 70%;
+    padding-top: 10%;
+    padding-bottom: 0;
+    overflow-y: hidden; */
+    /* background-color: #b0b0ba; */
+
+}
+
+.book[for="b4"]{
+    background-color: rgb(52, 153, 158);
+}
+
+.book[for="b5"]{
+    background-color: rgb(172, 134, 52);
+}
+
+
+.book[for="b6"]{
+    background-color: rgb(174, 32, 110);
+}
+
+
+/* 3rd shelf */
+.container3 {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 7%;
+
+
+}
+
+.book[for="b7"]{
+    background-color: rgb(8, 40, 41);
+}
+
+.book[for="b8"]{
+    background-color: rgb(12, 8, 1);
+}
+
+
+.book[for="b9"]{
+    background-color: rgb(48, 29, 39);
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        max-width: 100%;
+        padding-left: 0%;
+    }
+
+    .container2{
+        max-width: 100%;
+        padding-top: 20%;
+    }
+
+    .container3{
+        max-width: 100%;
+        padding-top: 20%;
+    }
+    
+}
