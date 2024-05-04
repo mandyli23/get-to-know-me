@@ -10,7 +10,6 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
 		/>
-		
 
 		<link rel="stylesheet" href="./css/home.css" />
 		<!-- GSAP -->
@@ -28,7 +27,6 @@
 						start: "10px",
 						end: "200px",
 						scrub: true,
-					
 					}, // start the animation when ".box" enters the viewport (once)
 					x: 500,
 					y: 0,
@@ -57,51 +55,26 @@
 
 				// water animation test start
 
-				const water = document.querySelector("#imageWater");
-				const girl = document.querySelector("#imageGirl");
-
-				const tl = new TimelineLite();
-
-
-
-				// // Animate the girl and the water initially hidden
-				// tl.set([water], { opacity: 0 });
-
-				// // Define the animation sequence
-				// tl.to(girl, 4.0)
-				// 	.from(
-				// 		water,
-				// 		{
-				// 			scrollTrigger: {
-				// 				trigger: girl,
-				// 				markers: true,
-				// 				start: "top center", // Adjust as needed for trigger point
-				// 				onEnter: () => tl.play(), // Play the timeline when girl is in view
-				// 			},
-				// 		},
-				// 		tl.duration(),
-				// 		{ scaleX: 0, transformX: "right", ease: Linear.easeNone },
-				// 		0
-				// 	)
-				// 	.to(water, 0.2);
-
-				// Use ScrollTrigger to trigger animation when the girl comes into view
-
-				//y does this ruin all my other animations!
-				// tl.from(girl, 2.0, {})
-				// 	.from(
-				// 		water,
-				// 		tl.duration(),
-				// 		{
-				// 			scaleX: -0.2,
-				// 			transformX: "right",
+				gsap.from("#imageWater", {
+					scrollTrigger: {
+						trigger: "#imageWater",
+						toggleActions: "restart pause reverse none",
+						start: "200px",
+						end: "700px",
+						scrub: true,
+						// markers: true,
+						opacity: 0,
+					}, // start the animation when ".box" enters the viewport (once)
+					// transformX: 500,
+					// x: 200,
+					scaleX: 0.6,
+					rotate: -20,
+					// y: 0,
+					ease: "power1.inOut",
 				
-				// 			ease: Linear.easeNone,
-				// 		},
-				// 		0
-				// 	)
-				// 	.to(water, 0.2);
 
+					// rotate: 180,
+				});
 				// water animation test end
 
 				// gsap.from("#imageWater", {
@@ -125,9 +98,7 @@
 						start: "-400px",
 						end: "-50px",
 						scrub: true,
-						markers: true,
-						ease: "ease.in"
-						
+						ease: "ease.in",
 					},
 					xPercent: -100,
 				});
@@ -156,6 +127,19 @@
 					xPercent: 100,
 				});
 
+				document.querySelector(".slideWaterThing2")
+				gsap.from(".slideWaterThing2", {
+					scrollTrigger: {
+						trigger: ".slideWater2",
+						toggleActions: "restart pause reverse none",
+						start: "-400px",
+						end: "-50px",
+						scrub: true,
+						ease: "ease.in",
+					},
+					xPercent: -100,
+				});
+
 				gsap.from(".slideWater3", {
 					scrollTrigger: {
 						trigger: ".slideWater3",
@@ -172,7 +156,7 @@
 	</head>
 	<body>
 		<div class="nav">
-			<p class="p1">>:D >:D >:D</p>
+			<!-- <p class="p1">>:D >:D >:D</p> -->
 
 			<!-- <p class="p2"> -->
 			<a class="p2" href="./book.html">BOOKS / </a>
@@ -185,6 +169,16 @@
 			</p>
 			<p class="p5">
 				<a href="./sport.html">SPORTS </a>
+			</p>
+			<!--  -->
+			<p class="p6">
+				<a href="./animal.html"> ANIMALS /</a>
+			</p>
+			<p class="p7">
+				<a href="./food.html">FOOD / </a>
+			</p>
+			<p class="p8">
+				<a href="./cafes.html">CAFES </a>
 			</p>
 		</div>
 
@@ -203,12 +197,11 @@
 
 		<!-- absolutely postioned stuff with ids -->
 		<div id="imageGirl">
-			<img src="./home_images/Woman.png" 
-/>
+			<img src="./home_images/Woman.png" />
 		</div>
 
 		<div id="imageWater">
-			<img src="./home_images/Water.png" />
+			<img id="imageWater1" src="./home_images/Water.png" />
 		</div>
 
 		<span class="material-symbols-outlined zindex3 book">
@@ -235,9 +228,15 @@
 		<div class="space-water2">
 			<img class="slideWater2" src="./home_images/Water2.png" />
 			<!-- fix -->
-			<!-- <span class="material-symbols-outlined tv">
-                comedy_mask
-                </span> -->
+			<span class="material-symbols-outlined pets slideWaterThing2">
+				<a href="./animal.html" class="clearunderline">pets</a>
+			</span>
+			<span class="material-symbols-outlined food slideWaterThing2">
+				<a href="./food.html" class="clearunderline">restaurant_menu</a>
+			</span>
+			<span class="material-symbols-outlined coffee slideWaterThing2">
+				<a href="./cafe.html" class="clearunderline">coffee_maker</a>
+			</span>
 		</div>
 		<div class="space-water3">
 			<img class="slideWater3" src="./home_images/Water3.png" />

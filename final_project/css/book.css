@@ -89,7 +89,7 @@
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    height: 80px;
+    height: 400px;
     width: 520px;
     opacity: 0;
     transform: translateY(30px);
@@ -98,13 +98,18 @@
     transition: all .3s ease;
 }
 .description h4 {
+    font-family: 'Glamora';
     text-transform: uppercase;
-    padding-left: 20px;
+    padding-left: 400px;
+    padding: bottom;
+    padding-bottom: 30px;
 }
 .description p {
-    color: #b0b0ba;
+    font-family: raleway;
+    color: white;
     padding-top: 5px;
-    padding-left: 20px;
+    padding-left: 400px;
+    padding-bottom: 30px;
 }
 
 input {
@@ -121,16 +126,16 @@ input:checked + label .description {
 }
 
 .book[for="b1"]{
-    background-color: blue;
+    background-image: url( "./books/rtdm.jpg");
 }
 
 .book[for="b2"]{
-    background-color: rgb(70, 70, 96);
+    background-image: url( "./books/wfip.jpg");
 }
 
 
 .book[for="b3"]{
-    background-color: rgb(199, 199, 223);
+    background-image: url( "./books/blm.jpg");
 }
 
 /* 2nd shelf */
@@ -150,16 +155,16 @@ input:checked + label .description {
 }
 
 .book[for="b4"]{
-    background-color: rgb(52, 153, 158);
+    background-image: url( "./books/gut.jpg");
 }
 
 .book[for="b5"]{
-    background-color: rgb(172, 134, 52);
+    background-image: url( "./books/rtdm.jpg");
 }
 
 
 .book[for="b6"]{
-    background-color: rgb(174, 32, 110);
+    background-image: url( "./books/sap.jpg");
 }
 
 
@@ -175,16 +180,16 @@ input:checked + label .description {
 }
 
 .book[for="b7"]{
-    background-color: rgb(8, 40, 41);
+    background-image: url( "./books/blm.jpg");
 }
 
 .book[for="b8"]{
-    background-color: rgb(12, 8, 1);
+    background-image: url( "./books/gut.jpg");
 }
 
 
 .book[for="b9"]{
-    background-color: rgb(48, 29, 39);
+    background-image: url( "./books/sap.jpg");
 }
 
 @media screen and (max-width:768px) {

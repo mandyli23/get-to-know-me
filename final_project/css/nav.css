@@ -18,7 +18,7 @@
 html, body {
 
     background: #AEB8FE;
-    font-family: "Roslindale Display Condensed";
+   
 
 }
 
@@ -34,6 +34,9 @@ h1.hero-title {
     text-align: center;
     font-size: 10vw;
     font-weight: 400;
+    font-family: raleway;
+    font-weight: 300;
+
 
 }
 
@@ -139,20 +142,7 @@ svg path {
 
 } 
 
-/* #hamburger .active span {
-    transform: rotate(45deg);
-   
 
-
-}
-
-#hamburger .active span::before {
-    top: unset;
-
-    width: 24px;
-    transform: rotate(-90deg);
-
-} */
 
 .nav {
     position:absolute;
@@ -201,6 +191,7 @@ div > .overlay {
 
 }
 
+/* this is where the hidden blocks are */
 .nav-item:after {
     content: "";
     position: absolute;
@@ -208,6 +199,7 @@ div > .overlay {
     left: -20px;
     width: 120%;
     height: 200%;
+    /* background-color: black; */
     background: #27187E;
     margin: 0 auto;
 

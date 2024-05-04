@@ -27,6 +27,10 @@
 	font-size: 10rem;
 	color: black;
 }
+
+body {
+	overflow-x: hidden;
+}
 /* Charisma */
 
 .Char {
@@ -92,6 +96,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .moving-RC2 {
@@ -99,13 +105,18 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
+
 
 .moving-RC3 {
 	width: 100%;
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .space1 {
@@ -180,6 +191,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .moving-RC2-L {
@@ -187,6 +200,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .moving-RC3-L {
@@ -194,6 +209,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .space1 {
@@ -261,6 +278,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .moving-RC2-V {
@@ -268,6 +287,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .moving-RC3-V {
@@ -275,6 +296,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .space1 {
@@ -349,6 +372,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .moving-RC2-W {
@@ -356,6 +381,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .moving-RC3-W {
@@ -363,6 +390,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .space1 {
@@ -437,6 +466,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .moving-RC2-S {
@@ -444,6 +475,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .moving-RC3-S {
@@ -451,6 +484,8 @@
 	height: 750px;
 	border-bottom: 10px solid #27187e;
 	background-color: rgb(22, 25, 182);
+	display: flex;
+	justify-content: center;
 }
 
 .space1 {
@@ -464,16 +499,22 @@
 	/* charisma */
 	.Char {
 		flex-direction: column;
-		height: fit-content;
+		height: 4000px;
 	}
 	.static-L {
 		width: 100%;
 		height: 500px;
+		border: none;
 	}
 
 	.moving-R {
 		width: 100%;
-	}
+	}css/people/lyna_.jpg
+
+
+
+
+
 
 	/* lyna */
 	.Lyna {
@@ -502,6 +543,7 @@
 
 	.moving-R-V {
 		width: 100%;
+		flex-wrap: nowrap;
 	}
 
 	/* Wilson */

@@ -28,7 +28,6 @@
 				//help i broookkee it
 				gsap.set(spanBefore, { background: "#FFF" });
 				gsap.set(".nav", { visibility: "hidden" });
-			
 
 				//toggle menu
 
@@ -71,25 +70,30 @@
 					// 	"<"
 					// );
 
-
-					tl.to("#hamburger span:nth-child(1)", 1.25, {
-						marginTop: "-5px",
-						x: -20,
-						y: 28,
-						rotate: 45,
-						ease: "power4.inOut",
-					},
-					"<"
+					tl.to(
+						"#hamburger span:nth-child(1)",
+						1.25,
+						{
+							marginTop: "-5px",
+							x: -20,
+							y: 28,
+							rotate: 45,
+							ease: "power4.inOut",
+						},
+						"<"
 					);
 
-					tl.to("#hamburger span:nth-child(2)", 1.25, {
-						marginTop: "-5px",
-						x: -20,
-						y: 28,
-						rotate: -45,
-						ease: "power4.inOut",
-					},
-					"<"
+					tl.to(
+						"#hamburger span:nth-child(2)",
+						1.25,
+						{
+							marginTop: "-5px",
+							x: -20,
+							y: 28,
+							rotate: -45,
+							ease: "power4.inOut",
+						},
+						"<"
 					);
 
 					// tl.to("#hamburger span", 1.25, {
@@ -110,23 +114,18 @@
 							ease: "power2.inOut",
 						},
 						"<"
-					
 					);
 
 					tl.to(
 						spanBefore,
 						1.2,
 						{
-							visibility: "hidden" ,
+							visibility: "hidden",
 							// background: "white",
 							ease: "power2.inOut",
 						},
 						"<"
-				
 					);
-				
-
-			
 
 					tl.to(
 						path,
@@ -135,7 +134,6 @@
 							//to animate overlays, we use attribute method in gsap
 							attr: {
 								d: start,
-						
 							},
 							ease: "power2.inOut.easeIn",
 						},
@@ -198,7 +196,7 @@
 		<!-- svg gsap attempt -->
 		<!-- <svg viewBox="0 0 1000 1000"></svg> -->
 		<!-- svg gsap attempt -->
-		<h1 class="hero-title">Favorite <br/>Movies</h1>
+		<h1 class="hero-title">Favorite <br />Movies</h1>
 		<!-- toggle btn -->
 		<div id="toggle-btn">
 			<div id="hamburger">
@@ -211,7 +209,6 @@
 		<div class="overlay">
 			<svg viewBox="0 0 1000 2000">
 				<path d="M0 2S175 1 1000 1s1000 1 2000 10V0H0Z"></path>
-
 			</svg>
 		</div>
 
@@ -283,7 +280,129 @@
 		<!-- help -->
 
 		<!-- END OF NAV BAR -->
-		<!-- <div class="space"></div>  -->
+		<!-- space filler -->
+		<div class="space">
+			<span class="material-symbols-outlined arrow"> keyboard_arrow_down </span>
+			<span class="material-symbols-outlined arrow"> keyboard_arrow_down </span>
+			<span class="material-symbols-outlined arrow"> keyboard_arrow_down </span>
+		</div>
 
+		<!-- start movie layout -->
+		<div class="movCollection">
+			<!-- anyone but you -->
+			<div class="containMov">
+				<div class="aby">
+					<iframe
+						width="840"
+						height="472.5"
+						src="https://www.youtube.com/embed/UtjH6Sk7Gxs?si=mx4iGeuqneDzV19f"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					>
+					</iframe>
+					<div class="evenOut">
+					<p>Anyone but You</p>
+					</div>
+				</div>
+			</div>
+			<!-- Crazy Rich Asians -->
+			<div class="containMov1">
+				<div class="cra">
+					<iframe
+						width="840"
+						height="472.5"
+						src="https://www.youtube.com/embed/ZQ-YX-5bAs0?si=C6i9YIMUZgG_FdvM"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					>
+					</iframe>
+					<div class="evenOut">
+					<p class="p1">Crazy Rich Asians</p>
+					</div>
+				</div>
+			</div>
+			<!-- Parasite -->
+			<div class="containMov">
+				<div class="par">
+					<iframe
+						width="840"
+						height="472.5"
+						src="https://www.youtube.com/embed/5xH0HfJHsaY?si=bkElWS7eyB7t_9s8"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					>
+					</iframe>
+					<div class="evenOut">
+					<p>Parasite</p>
+					</div>
+				</div>
+			</div>
+			<!-- Spiderman into the Spiderverse-->
+			<div class="containMov1">
+				<div class="spdr">
+					<iframe
+						width="840"
+						height="472.5"
+						src="https://www.youtube.com/embed/g4Hbz2jLxvQ?si=4tq4w75UYKJjNlmE"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+					<div class="evenOut1">
+					<p class="p1">Spiderman into the Spiderverse</p>
+					</div>
+				</div>
+			</div>
+			<!-- Matrix -->
+			<div class="containMov">
+				<div class="mtrx">
+					<!-- <iframe> -->
+					<iframe
+						width="840"
+						height="472.5"
+						src="https://www.youtube.com/embed/tGgCqGm_6Hs?si=V4xvmOcjgkABf4f9"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+
+					<!-- </iframe> -->
+					<div class="evenOut">
+					<p>Matrix</p>
+					</div>
+				</div>
+			</div>
+			<!-- 20th Century Girl -->
+			<div class="containMov1">
+				<div class="20thcg">
+					<iframe
+						width="840"
+						height="472.5"
+						src="https://www.youtube.com/embed/KFS4_qevE7M?si=Um8VhGia-wQAnpeR"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+					<div class="evenOut">
+					<p class="p1">20th Century Girl</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

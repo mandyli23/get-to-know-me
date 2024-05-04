@@ -34,14 +34,11 @@
 				function revealMenu() {
 					revealMenuItems();
 
-					const hamburger = document.getElementById("hamburger");
+
 					const toggleBtn = document.getElementById("toggle-btn");
 
-					//I removed the e that was passed into function because I already loaded DOM content and am listening to that
+
 					toggleBtn.onclick = function () {
-						//when hamburger class is clicked, it will display the css for the active class
-						hamburger.classList.toggle("active");
-						//tl reversed and !reversed is used to open and close the animation after the user clicks
 						tl.reversed(!tl.reversed());
 						// this wont work because it will always evalute to false, and set the timeline in reverse
 						//which doesn't evalute its current state
@@ -152,18 +149,6 @@
 						"<"
 					);
 
-					//something went wrong around here
-					// .to(path, 0.8, {
-					//     attr: {
-					//         d:end,
-
-					//     },
-					//     ease: "power2.inOut.easeIn",
-					// },
-					// "-0.5"
-					// )
-
-					//how to reveal
 
 					tl.to(
 						".nav",
@@ -291,19 +276,27 @@
 
 	<!-- top section -->
 			<div class="wrapper-f">
+			
 				<div class="border1">
-					<div class="border2"></div>
+					<div class="border2">
+						<img class="noodle" src="./css/food/noodles.png"/>
+
+					</div>
 				</div>
 			</div>
 
 			<div class="wrapper-f2">
 				<div class="border5">
-					<div class="pho-border6"></div>
+					<div class="border6">
+						<img class="mngsteen" src="./css/food/mangosteen.png"/>
+					</div>
 				</div>
 
 				<div class="wrapper-f3">
 					<div class="border5">
-						<div class="border6"></div>
+						<div class="border6">
+							<img class="enoki" src="./css/food/enoki.png"/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -313,7 +306,9 @@
 			<div class="cont-1-5">
 
 					<div class="border5">
-						<div class="border6"></div>
+						<div class="border6">
+							<img class="sqd" src="./css/food/driedsquid .png"/>
+						</div>
 					</div>
 
 			</div>
@@ -321,12 +316,16 @@
 			<div class="cont-row2">
 				<div class="wrapper-f2">
 					<div class="border5">
-						<div class="border6"></div>
+						<div class="border6">
+							<img class="gva" src="./css/food/guava.png"/>
+						</div>
 					</div>
 	
 					<div class="wrapper-f3">
 						<div class="border5">
-							<div class="border6"></div>
+							<div class="border6">
+								<img class="bkchy" src="./css/food/bokchoy.png"/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -334,7 +333,9 @@
 
 				<div class="wrapper-f-l">
 					<div class="border1">
-						<div class="border2"></div>
+						<div class="border2">
+							<img class="pps" src="./css/food/papaya_salad.png"/>
+						</div>
 					</div>
 				</div>
 	
@@ -343,11 +344,15 @@
 			<!--  -->
 			<div class="wrapper-f-r">
 				<div class="border3">
-					<div class="border4"></div>
+					<div class="border4">
+						<img class="soup" src="./css/food/soup.png"/>
+					</div>
 				</div>
 			</div>
 			<!--  -->
 		</div>
 		<!-- cont food end^ -->
+
+
 	</body>
 </html>
